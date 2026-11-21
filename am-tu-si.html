@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Am Tu Sĩ – Merch LingOrm (bản xem trước)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0e6;--card:#fffaf2;--ink:#2a1d15;--brown:#6b4a36;--line:#e3d6c4;--acc:#8fa07e;--accink:#fff;--warn:#b4533a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#1c1511;--card:#271d17;--ink:#f3e9db;--brown:#d2b79c;--line:#41322a;--acc:#9bad89;--accink:#1c1511;--warn:#e08a6e}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 'Be Vietnam Pro',system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.15}
+a{color:inherit}button{font:inherit;cursor:pointer}
+.w{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px;height:58px}
+.logo{font:700 20px Fraunces,serif;margin-right:auto;letter-spacing:.2px}
+nav{display:none;gap:18px}nav a{text-decoration:none;font-size:15px}
+@media(min-width:760px){nav{display:flex}.burger{display:none}}
+.ib{background:none;border:1px solid var(--line);border-radius:10px;min-width:42px;height:42px;color:var(--ink);position:relative}
+.cnt{position:absolute;top:-6px;right:-6px;background:var(--ink);color:var(--bg);border-radius:99px;font-size:11px;min-width:18px;height:18px;line-height:18px}
+#mnav{display:none;flex-direction:column;padding:6px 18px 14px}#mnav.on{display:flex}#mnav a{padding:10px 0;text-decoration:none;border-top:1px solid var(--line)}
+#sb{display:none;padding:0 0 10px}#sb.on{display:block}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.btn{border:0;border-radius:10px;padding:12px 18px;background:var(--ink);color:var(--bg);font-weight:600}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--ink)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.hero{display:grid;gap:22px;padding:34px 0 26px}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr 1fr;align-items:center;padding:56px 0}}
+.hero h1{font-size:clamp(34px,7vw,56px)}.hero p{color:var(--brown);max-width:44ch}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.art{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(160deg,#d9c4a6,#8c6b52);display:grid;place-items:center;color:#fff8ec;text-align:center;padding:20px;max-height:420px;width:100%}
+.art b{font:700 28px Fraunces,serif;display:block}
+section{padding:30px 0}h2{font-size:28px;margin-bottom:6px}.sub{color:var(--brown);margin:0 0 18px}
+.camp{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+@media(min-width:760px){.camp{grid-template-columns:1fr 1fr}}
+.st{display:inline-block;background:var(--acc);color:var(--accink);border-radius:99px;padding:2px 12px;font-size:13px;font-weight:600}
+.meta{color:var(--brown);font-size:14px}
+.tools{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin-bottom:16px}@media(min-width:760px){.tools{grid-template-columns:repeat(4,1fr)}}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}}
+.p{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.pi{aspect-ratio:1;display:grid;place-items:center;font-size:54px;position:relative;cursor:pointer;border:0;width:100%}
+.tag{position:absolute;top:8px;left:8px;background:var(--ink);color:var(--bg);font-size:12px;padding:1px 9px;border-radius:99px;font-family:'Be Vietnam Pro'}
+.pb{padding:11px;display:flex;flex-direction:column;gap:5px;flex:1}.pb h3{font-size:16px}.pr{font-weight:600}.pb .btn{margin-top:auto;padding:9px}
+.out{color:var(--warn);font-size:13px}
+.gal{columns:2 130px;column-gap:10px}@media(min-width:760px){.gal{columns:4}}
+.gal button{display:block;width:100%;margin:0 0 10px;border:0;border-radius:12px;color:#fff8ec;font:700 15px Fraunces,serif;padding:0}
+.note{font-size:13px;color:var(--brown)}
+.ov{position:fixed;inset:0;background:rgba(20,12,8,.55);display:none;z-index:40;justify-content:flex-end;align-items:center}.ov.on{display:flex}
+.pan{background:var(--bg);width:100%;max-width:460px;height:100%;overflow:auto;padding:18px;padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+.pan.c{margin:auto;height:auto;max-height:92%;border-radius:16px;max-width:520px}
+.hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ci{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.ci i{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;font-size:28px;font-style:normal}
+.q{display:inline-flex;align-items:center;gap:8px}.q button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.tot div{display:flex;justify-content:space-between;padding:3px 0}.tot .g{font-weight:700;font-size:18px;border-top:1px solid var(--line);margin-top:6px;padding-top:8px}
+label{display:block;font-size:14px;font-weight:500;margin:12px 0 4px}.err{color:var(--warn);font-size:13px;min-height:16px}
+.qr{border:2px dashed var(--line);border-radius:12px;padding:14px;text-align:center;font-size:14px;margin:8px 0}
+.pv{max-width:100%;max-height:200px;border-radius:10px;margin-top:8px;display:block}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}#toast.on{opacity:1}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--brown);font-size:14px;margin-top:20px}
+footer a{margin-right:14px;display:inline-block;padding:3px 0}
+.empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--brown)}.logo{display:flex;align-items:center;gap:8px}.av{width:34px;height:34px;border-radius:50%;background:var(--brown);color:var(--bg);display:inline-grid;place-items:center;overflow:hidden;font:700 16px Fraunces,serif;flex:none}.av img{width:100%;height:100%;object-fit:cover}.av.big{width:96px;height:96px;font-size:40px;border:3px solid #fff8ec}.art .av.big{display:grid;margin:0 auto 10px}.gab{display:grid;gap:18px;background:linear-gradient(135deg,#d9e3c8,#f3cfa3);color:#2a1d15;border-radius:22px;padding:22px;align-items:center}@media(min-width:760px){.gab{grid-template-columns:1.2fr 1fr;padding:32px}}.gab h2{font-size:clamp(26px,5vw,38px)}.gab p{margin:6px 0 14px}.gab .btn{background:#2a1d15;color:#fff8ec}.gai{aspect-ratio:4/3;border-radius:16px;background:#fff8ec80;border:2px dashed #2a1d1566;display:grid;place-items:center;text-align:center;overflow:hidden;transform:rotate(-2deg)}.gai img{width:100%;height:100%;object-fit:cover}#ad h3{margin:18px 0 6px}.st.ex{background:#2a1d15;color:#fff8ec;font-size:14px;padding:7px 16px;border:2px solid #e9c27a;box-shadow:0 0 0 4px #e9c27a44}.camp.hl{border:2px solid var(--ink);box-shadow:6px 6px 0 #e9c27a}.gfg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.gfg img{width:100%;border-radius:10px;aspect-ratio:1;object-fit:cover}
+</style></head><body>
+<header><div class="w"><div class="bar">
+<button class="ib burger" data-a="menu" aria-label="Menu">☰</button>
+<div class='logo'><span id='avH' class='av'></span><span id='shopN'>Am Tu Sĩ</span></div>
+<nav><a href="#top">Trang chủ</a><a href="#camp">Quà tặng theo quý</a><a href="#shop">Cửa hàng</a><a href='#ga' id='navGa' data-a='ga'>GA nhận quà</a><a href="#moments">Khoảnh khắc</a><a href="#about">Giới thiệu</a></nav>
+<button class="ib" data-a="search" aria-label="Tìm kiếm">⌕</button>
+<button class="ib" data-a="cart" aria-label="Giỏ hàng">🛍<span class="cnt" id="cnt">0</span></button>
+</div><div id="sb"><input id="q" placeholder="Tìm theo tên hoặc từ khóa…" aria-label="Tìm sản phẩm"></div></div>
+<div id="mnav"><a href='#ga' id='mGa' data-a='ga'>🎁 GA nhận quà</a><a href="#camp" data-a="menu">Quà tặng theo quý</a><a href="#shop" data-a="menu">Cửa hàng</a><a href="#moments" data-a="menu">Khoảnh khắc LingOrm</a><a href="#about" data-a="menu">Giới thiệu</a></div></header>
+
+<main id="top" class="w">
+<div class="hero"><div><h1>Merch nhỏ xinh cho tình yêu dành cho LingOrm</h1>
+<p>Fanmade merch theo từng quý: móc khóa, photocard, sticker và những món quà chỉ có ở Am Tu Sĩ.</p>
+<div class="row"><a class="btn" href="#shop" style="text-decoration:none">Khám phá bộ sưu tập</a><a class="btn o" href="#camp" style="text-decoration:none">Xem đợt quà hiện tại</a></div></div>
+<div class="art"><div><span id='avB' class='av big'></span><b id='shopN2'>Am Tu Sĩ</b><span>Ảnh banner do bạn tải lên<br>trong trang quản trị</span></div></div></div>
+
+<section id='ga'><div class='gab'><div><span class='st'>Giveaway</span><h2 style='margin:10px 0 4px'>Tham gia GA nhận quà cực đã</h2><h3 id='gaT' style='font-size:20px'></h3><p id='gaD'></p><p style='margin:-6px 0 14px;font-weight:600;font-size:15px'>🔒 Chỉ dành cho member đã gia nhập group “Fans Cuồng CH3”</p><button class='btn' data-a='ga'>Tham gia GA ngay</button></div><div class='gai' id='gaI'></div></div></section>
+<section id="camp"><h2>Quà tặng theo quý</h2><p class="sub">Mỗi quý một đợt quà dành cho fan, bán kèm merch thiết kế riêng.</p>
+<div class='camp hl'><div><span class='st ex' id='cst'>ĐỘC QUYỀN CHỈ CÓ TRONG GROUP</span><h3 style="margin:10px 0 6px;font-size:24px">Season 01 · Winter Collection</h3>
+<p class="meta">Mở bán: 01/12/2026 – 31/12/2026<br>Còn lại: <b id="left"></b> suất bundle</p>
+<p>Fan nhận quà tặng đặc biệt khi mua Quarterly Gift Bundle. Số lượng có hạn.</p>
+<button class='btn' data-a='gift'>Xem sản phẩm của đợt này</button></div>
+<div class="art" style="aspect-ratio:16/10;max-height:240px;background:linear-gradient(160deg,#c9d3bd,#7d8f6e)"><div><b>Quarterly Gift</b>Season 01</div></div></div>
+<p class="note" style="margin-top:10px">Đợt cũ sẽ được lưu lại để khách xem lại khi bạn thêm campaign mới trong admin.</p></section>
+
+<section id="shop"><h2>Cửa hàng</h2><p class="sub">Chọn món bạn thích, đặt hàng ngay trên website.</p>
+<div class="tools"><select id="fc" aria-label="Danh mục"></select>
+<select id="fs" aria-label="Tình trạng"><option value="">Tất cả tình trạng</option><option value="in">Còn hàng</option><option value="out">Hết hàng</option></select>
+<select id="ff" aria-label="Lọc nhanh"><option value="">Tất cả sản phẩm</option><option value="new">Sản phẩm mới</option><option value="feat">Nổi bật</option><option value="camp">Thuộc đợt quà hiện tại</option></select>
+<select id="so" aria-label="Sắp xếp"><option value="new">Mới nhất</option><option value="lo">Giá thấp đến cao</option><option value="hi">Giá cao đến thấp</option><option value="feat">Nổi bật</option></select></div>
+<div class="grid" id="grid"></div></section>
+
+<section id="moments"><h2>Khoảnh khắc LingOrm</h2><p class="sub">Bấm vào ảnh để xem lớn.</p>
+<div class="gal" id="gal"></div>
+<p class="note">Đây là ô giữ chỗ. Ảnh thật sẽ do bạn tải lên trong admin (ghi nguồn và credit ảnh). Chưa có ảnh nào được lấy tự động từ lingorm.pics.</p></section>
+
+<section id="about"><h2>Về Am Tu Sĩ</h2><p style="max-width:60ch">Am Tu Sĩ là nơi những món merch nhỏ xinh ra đời cho các khoảnh khắc yêu LingOrm. Mỗi món được thiết kế riêng, làm theo từng đợt và có hạn, để bạn giữ lại như một mảnh kỷ niệm của fandom.</p></section>
+</main>
+
+<footer><div class="w"><span id='avF' class='av' style='width:26px;height:26px;font-size:13px;margin-right:6px'></span><b id='shopN3' style="font-family:Fraunces,serif;font-size:18px;color:var(--ink)">Am Tu Sĩ</b>
+<p>Fanmade merchandise, không phải đơn vị chính thức đại diện nghệ sĩ.</p>
+<a href="#" data-a="ph" data-m="Link Fanpage chưa được cài. Thêm trong Admin › Cài đặt.">Fanpage</a><a href="#" data-a="ph" data-m="Link Zalo chưa được cài. Thêm trong Admin › Cài đặt.">Zalo</a><a href="#" data-a="ph" data-m="Liên hệ shop: chưa cài thông tin.">Liên hệ</a><br>
+<a href="#" data-a="pol" data-m="Chính sách giao hàng: phí ship 36.000đ mỗi đơn. Nội dung chi tiết sửa trong Admin.">Giao hàng</a><a href="#" data-a="pol" data-m="Thanh toán bằng chuyển khoản QR, shop xác nhận thủ công.">Thanh toán</a><a href="#" data-a="pol" data-m="Chính sách đổi trả: shop sẽ bổ sung.">Đổi trả</a><a href="#" data-a="pol" data-m="Chính sách bảo mật: shop sẽ bổ sung.">Bảo mật</a><a href='#admin' data-a='admin'>Quản trị (xem trước)</a></div></footer>
+
+<div class='ov' id='ov-gift'><div class='pan c' id='gf' style='max-width:720px'></div></div>
+<div class="ov" id="ov-cart"><div class="pan" id="cart"></div></div>
+<div class="ov" id="ov-prod"><div class="pan c" id="prod"></div></div>
+<div class="ov" id="ov-co"><div class="pan" id="co"></div></div>
+<div class="ov" id="ov-lb"><div class="pan c" id="lb"></div></div>
+<div class='ov' id='ov-ad'><div class='pan' id='ad'></div></div>
+<div id="toast" role="status"></div>
+
+<script>
+const SHIP=36000,SHOP='Am Tu Sĩ';
+const P=[
+{id:'ATS-001',n:'LingOrm Photocard Set',p:89000,c:'Photocard',s:40,t:'NEW',e:'🖼️',col:'#e6d3b8',d:'Bộ 8 photocard in 2 mặt, giấy couche cán mờ. Fanmade, thiết kế riêng.',nw:1,ft:1,cp:0},
+{id:'ATS-002',n:'Acrylic Keychain',p:69000,c:'Phụ kiện',s:25,t:'Bán chạy',e:'🔑',col:'#cfdcc4',d:'Móc khóa acrylic trong 2 lớp, kèm khoen và dây đeo.',nw:0,ft:1,cp:0},
+{id:'ATS-003',n:'Sticker Pack',p:49000,c:'Sticker',s:60,t:'NEW',e:'✨',col:'#f0d9c8',d:'Gói 10 sticker chống nước, cắt sẵn theo hình.',nw:1,ft:0,cp:0},
+{id:'ATS-004',n:'Mini Photo Frame',p:129000,c:'Đồ trang trí',s:12,t:'Giới hạn',e:'📷',col:'#d8c7b2',d:'Khung ảnh mini để bàn, kèm 1 ảnh in.',nw:0,ft:1,cp:1},
+{id:'ATS-005',n:'3D Printed Desk Decor',p:159000,c:'In 3D',s:8,t:'In 3D',e:'🧸',col:'#c9d3bd',d:'Món trang trí bàn làm việc in 3D, hoàn thiện thủ công.',nw:1,ft:0,cp:0},
+{id:'ATS-006',n:'Tote Bag',p:199000,c:'Phụ kiện',s:0,t:'Hết hàng',e:'👜',col:'#e3d6c4',d:'Túi tote canvas dày in họa tiết fandom.',nw:0,ft:0,cp:0},
+{id:'ATS-007',n:'Fanmade Pin',p:59000,c:'Phụ kiện',s:30,t:'NEW',e:'📍',col:'#f0e0c2',d:'Huy hiệu cài áo kim loại, men mềm.',nw:1,ft:0,cp:0},
+{id:'ATS-008',n:'Quarterly Gift Bundle',p:249000,c:'Quà theo quý',s:50,t:'Season 01',e:'🎁',col:'#bfa58a',d:'Bundle độc quyền đợt Winter: photocard, keychain, sticker và quà tặng fan.',nw:0,ft:1,cp:1}];
+const $=s=>document.querySelector(s),vnd=n=>n.toLocaleString('vi-VN')+'đ';
+let cart={};try{cart=JSON.parse(localStorage.getItem('ats_cart')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('ats_cart',JSON.stringify(cart))}catch(e){}};
+const by=id=>P.find(x=>x.id===id);
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2400)}
+const ov=(id,on)=>$('#ov-'+id).classList.toggle('on',on);
+// campaign status from dates
+(()=>{const n=new Date(),a=new Date('2026-12-01'),b=new Date('2026-12-31T23:59:59');$('#left').textContent=by('ATS-008').s})();
+$('#fc').innerHTML='<option value="">Tất cả danh mục</option>'+[...new Set(P.map(x=>x.c))].map(c=>`<option>${c}</option>`).join('');
+function card(x){const o=x.s<=0;return `<div class="p"><button class="pi" style="background:${x.col}" data-a="view" data-id="${x.id}" aria-label="Xem ${x.n}">${x.e}<span class="tag">${x.t}</span></button><div class="pb"><h3>${x.n}</h3><span class="pr">${vnd(x.p)}</span>${o?'<span class="out">Hết hàng</span>':x.s<=10?`<span class="out">Chỉ còn ${x.s}</span>`:''}<button class="btn" data-a="add" data-id="${x.id}" ${o?'disabled':''}>${o?'Hết hàng':'Thêm vào giỏ'}</button></div></div>`}
+function render(){const q=$('#q').value.trim().toLowerCase(),c=$('#fc').value,s=$('#fs').value,f=$('#ff').value,so=$('#so').value;
+let r=P.filter(x=>(!q||(x.n+' '+x.d+' '+x.c+' '+x.t).toLowerCase().includes(q))&&(!c||x.c===c)&&(!s||(s==='in'?x.s>0:x.s<=0))&&(!f||(f==='new'?x.nw:f==='feat'?x.ft:x.cp)));
+r.sort((a,b)=>so==='lo'?a.p-b.p:so==='hi'?b.p-a.p:so==='feat'?b.ft-a.ft:b.id.localeCompare(a.id));
+$('#grid').innerHTML=r.length?r.map(card).join(''):'<div class="empty">Không tìm thấy sản phẩm phù hợp. Thử từ khóa khác hoặc xóa bộ lọc.</div>'}
+['#q','#fc','#fs','#ff','#so'].forEach(s=>$(s).addEventListener('input',render));
+// gallery placeholders
+$('#gal').innerHTML=['#d9c4a6','#c9d3bd','#e6d3b8','#bfa58a','#cfdcc4','#f0d9c8','#d8c7b2','#e3d6c4'].map((c,i)=>`<button data-a="img" data-i="${i}" style="background:${c};height:${[170,230,200,150][i%4]}px;color:#4a3426">Ảnh ${i+1}</button>`).join('');
+// cart
+const tot=()=>{const sub=Object.entries(cart).reduce((a,[id,q])=>a+by(id).p*q,0);return{sub,ship:sub?SHIP:0,all:sub?sub+SHIP:0}};
+function cartUI(){const ids=Object.keys(cart),n=ids.reduce((a,i)=>a+cart[i],0);$('#cnt').textContent=n;const t=tot();
+$('#cart').innerHTML=`<div class="hd"><h2 style="margin:0">Giỏ hàng</h2><button class="ib" data-a="close" aria-label="Đóng">✕</button></div>`+(ids.length?ids.map(id=>{const x=by(id);return `<div class="ci"><i style="background:${x.col}">${x.e}</i><div><b>${x.n}</b><div class="meta">${vnd(x.p)} × ${cart[id]} = ${vnd(x.p*cart[id])}</div><span class="q"><button data-a="dec" data-id="${id}" aria-label="Giảm">−</button>${cart[id]}<button data-a="inc" data-id="${id}" aria-label="Tăng">+</button></span></div><button class="ib" data-a="del" data-id="${id}" aria-label="Xóa">🗑</button></div>`}).join('')+`<div class="tot" style="margin-top:12px"><div><span>Tiền hàng</span><span>${vnd(t.sub)}</span></div><div><span>Phí vận chuyển (1 lần/đơn)</span><span>${vnd(t.ship)}</span></div><div class="g"><span>Tổng thanh toán</span><span>${vnd(t.all)}</span></div></div><div class="row"><button class="btn" data-a="co" style="flex:1">Tiến hành đặt hàng</button><button class="btn o" data-a="close">Tiếp tục mua hàng</button></div><p><button class="btn o" data-a="clear" style="padding:7px 12px;font-size:14px">Xóa toàn bộ giỏ</button></p>`:`<div class="empty">Giỏ hàng đang trống.<br><br><button class="btn" data-a="close">Đi mua sắm</button></div>`)}
+function add(id,k=1){const x=by(id);const q=(cart[id]||0)+k;if(q>x.s){toast('Chỉ còn '+x.s+' sản phẩm trong kho');return}if(q<=0)delete cart[id];else cart[id]=q;save();cartUI()}
+// checkout
+let shot=null;
+function checkout(){ov('cart',false);const t=tot();if(!t.sub)return;shot=null;
+$('#co').innerHTML=`<div class="hd"><h2 style="margin:0">Đặt hàng</h2><button class="ib" data-a="close" aria-label="Đóng">✕</button></div>
+<div class="note" style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:6px"><b>Bản xem trước:</b> đơn chưa được lưu vào database và chưa gửi email. Phần này sẽ hoạt động thật ở Giai đoạn 3–4 khi nối Supabase và Resend.</div>
+<label>Họ tên người nhận *</label><input id="f1"><div class="err" id="e1"></div>
+<label>Số điện thoại *</label><input id="f2" inputmode="tel"><div class="err" id="e2"></div>
+<label>Tên Facebook *</label><input id="f3"><div class="note">Nhập tên Facebook bạn dùng khi tham gia group Tu Sĩ (hoặc dán link). Shop dùng để liên hệ nếu đơn có vấn đề.</div><div class="err" id="e3"></div>
+<label>Địa chỉ nhận hàng *</label><textarea id="f4" rows="3" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành (theo địa danh cũ)"></textarea><div class="note">Nhập địa chỉ theo đơn vị hành chính cũ, càng chi tiết càng dễ giao.</div><div class="err" id="e4"></div>
+<h3 style="margin-top:14px">Thanh toán chuyển khoản</h3>
+<div class="qr">[Ảnh QR sẽ hiện ở đây]<br>Ngân hàng: [chưa cài] · Chủ TK: [chưa cài] · STK: [chưa cài]<br>Số tiền: <b>${vnd(t.all)}</b><br>Nội dung: <b>ATS [MÃ ĐƠN]</b> <button class="btn o" data-a="copy" style="padding:4px 10px;font-size:13px">Sao chép</button></div>
+<label>Ảnh chụp màn hình chuyển khoản *</label><input type="file" id="f5" accept="image/jpeg,image/png,image/webp"><div id="pvw"></div><div class="err" id="e5"></div>
+<div class="tot" style="margin-top:10px"><div><span>Tiền hàng</span><span>${vnd(t.sub)}</span></div><div><span>Phí vận chuyển</span><span>${vnd(t.ship)}</span></div><div class="g"><span>Tổng thanh toán</span><span>${vnd(t.all)}</span></div></div>
+<label style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" id="f6" style="width:auto;margin-top:5px"> Tôi đã kiểm tra thông tin và đồng ý đặt hàng.</label><div class="err" id="e6"></div>
+<button class="btn" id="go" data-a="submit" style="width:100%">Xác nhận đặt hàng</button>`;ov('co',true);
+$('#f5').addEventListener('change',e=>{const f=e.target.files[0],v=$('#pvw'),er=$('#e5');er.textContent='';shot=null;v.innerHTML='';if(!f)return;
+if(!/^image\/(jpeg|png|webp)$/.test(f.type)){er.textContent='Chỉ nhận ảnh JPG, PNG hoặc WebP.';e.target.value='';return}
+if(f.size>5*1024*1024){er.textContent='Ảnh quá lớn (tối đa 5MB).';e.target.value='';return}
+shot=f;const u=URL.createObjectURL(f);v.innerHTML=`<img class="pv" src="${u}" alt="Ảnh chuyển khoản"><button class="btn o" data-a="rm" style="margin-top:8px;padding:6px 12px">Xóa ảnh và chọn lại</button>`})}
+function submit(){const g=i=>$('#'+i).value.trim(),E=(i,m)=>{$('#e'+i).textContent=m;return !m};let ok=true;
+ok&=E(1,g('f1')?'':'Vui lòng nhập tên người nhận.');
+ok&=E(2,/^(0|\+84)\d{9}$/.test(g('f2').replace(/[\s.]/g,''))?'':'Số điện thoại chưa đúng (ví dụ 0901234567).');
+ok&=E(3,g('f3')?'':'Vui lòng nhập tên hoặc link Facebook.');
+ok&=E(4,g('f4').length>=10?'':'Vui lòng nhập địa chỉ đầy đủ.');
+ok&=E(5,shot?'':'Vui lòng tải ảnh chuyển khoản.');
+ok&=E(6,$('#f6').checked?'':'Vui lòng tick xác nhận.');
+if(!ok){toast('Còn thông tin chưa hợp lệ, xem các mục màu đỏ');return}
+const b=$('#go');if(b.disabled)return;b.disabled=true;b.textContent='Đang xử lý…';
+setTimeout(()=>{const code='ATS'+Date.now().toString(36).toUpperCase().slice(-6);const t=tot();
+$('#co').innerHTML=`<div class="hd"><h2 style="margin:0">Đặt hàng (xem trước)</h2><button class="ib" data-a="close">✕</button></div><p>Mã đơn mẫu: <b>${code}</b><br>Tổng: <b>${vnd(t.all)}</b><br>Trạng thái: Chờ xác nhận thanh toán</p><p class="note"><b>Đơn này chưa được lưu</b> và chưa có email, vì bản xem trước chưa nối backend. Giỏ hàng của bạn được giữ nguyên.</p><button class="btn" data-a="close">Đóng</button>`},900)}
+// xác nhận 2 lần (hộp thoại confirm() bị chặn trong trang này)
+function twice(el,key,fn){if(twice.k===key){clearTimeout(twice.h);twice.k=null;fn();return}twice.k=key;const old=el.textContent;el.textContent=key[0]==='d'?'Xóa?':'Bấm lần nữa để xóa hết';toast('Bấm thêm lần nữa để xác nhận xóa');twice.h=setTimeout(()=>{twice.k=null;if(el.isConnected)el.textContent=old},4000)}
+// events
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el){if(e.target.classList.contains('ov'))e.target.classList.remove('on');return}
+const a=el.dataset.a,id=el.dataset.id;
+if(a==='menu')$('#mnav').classList.toggle('on');
+else if(a==='search'){$('#sb').classList.toggle('on');$('#q').focus()}
+else if(a==='cart'){cartUI();ov('cart',true)}
+else if(a==='close')document.querySelectorAll('.ov').forEach(o=>o.classList.remove('on'));
+else if(a==='add'){add(id);toast('Đã thêm vào giỏ hàng')}
+else if(a==='inc')add(id,1);else if(a==='dec')add(id,-1);
+else if(a==='del'){twice(el,'d'+id,()=>{delete cart[id];save();cartUI();toast('Đã xóa sản phẩm')})}
+else if(a==='clear'){twice(el,'clear',()=>{cart={};save();cartUI();toast('Đã xóa toàn bộ giỏ hàng')})}
+else if(a==='co')checkout();else if(a==='submit')submit();
+else if(a==='rm'){$('#f5').value='';shot=null;$('#pvw').innerHTML=''}
+else if(a==='copy'){const t='ATS [MÃ ĐƠN]';(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast('Đã sao chép nội dung chuyển khoản'),()=>toast('Không sao chép được, hãy chép tay: '+t))}
+else if(a==='camp'){$('#ff').value='camp';render();location.hash='shop'}
+else if(a==='view'){const x=by(id),rel=P.filter(y=>y.c===x.c&&y.id!==id).slice(0,2);$('#prod').innerHTML=`<div class="hd"><h2 style="margin:0;font-size:22px">${x.n}</h2><button class="ib" data-a="close" aria-label="Đóng">✕</button></div><div class="art" style="aspect-ratio:16/10;font-size:72px;background:${x.col}">${x.e}</div><p class="pr" style="font-size:20px">${vnd(x.p)}</p><p>${x.d}</p><p class="meta">Mã: ${x.id} · Danh mục: ${x.c} · ${x.s>0?'Còn '+x.s+' sản phẩm':'Hết hàng'}</p><button class="btn" style="width:100%" data-a="add" data-id="${x.id}" ${x.s>0?'':'disabled'}>${x.s>0?'Thêm vào giỏ hàng':'Hết hàng'}</button>${rel.length?'<h3 style="margin-top:16px">Sản phẩm liên quan</h3><div class="grid" style="grid-template-columns:1fr 1fr">'+rel.map(card).join('')+'</div>':''}`;ov('prod',true)}
+else if(a==='img'){$('#lb').innerHTML=`<div class="hd"><b>Ảnh ${+el.dataset.i+1}</b><button class="ib" data-a="close">✕</button></div><div class="art" style="background:${el.style.background}">Ảnh LingOrm<br>(tải lên trong admin)</div><p class="note">Nguồn và credit ảnh sẽ hiện ở đây.</p>`;ov('lb',true)}
+else if(a==='ph'||a==='pol'){e.preventDefault();toast(el.dataset.m)}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.ov').forEach(o=>o.classList.remove('on'))});
+const DEF={name:'Am Tu Sĩ',avatar:'',ga:{on:true,title:'GA Winter Season 01',desc:'Bình luận và tham gia để có cơ hội nhận quà fanmade từ shop.',url:'',img:''},gift:{cond:'Là member đã gia nhập group “Fans Cuồng CH3”.\n(Nội dung mẫu: admin cập nhật điều kiện cụ thể của đợt này trong Quản trị.)',imgs:[]}};let S=JSON.parse(JSON.stringify(DEF));try{const r=JSON.parse(localStorage.getItem('ats_set')||'null');if(r)S={...DEF,...r,ga:{...DEF.ga,...(r.ga||{})},gift:{...DEF.gift,...(r.gift||{})}}}catch(e){}let D=null;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/'/g,'&#39;');const okUrl=u=>/^https?:[/][/][^ ]+$/i.test(u);
+const ini=n=>esc((n||'A').trim().charAt(0).toUpperCase());
+function apply(){const av=S.avatar?`<img src='${S.avatar}' alt='${esc(S.name)}'>`:ini(S.name);['avH','avB','avF'].forEach(i=>$('#'+i).innerHTML=av);['shopN','shopN2','shopN3'].forEach(i=>$('#'+i).textContent=S.name);document.title=S.name+' – Merch LingOrm (bản xem trước)';const g=S.ga;$('#ga').style.display=g.on?'':'none';['navGa','mGa'].forEach(i=>$('#'+i).style.display=g.on?'':'none');$('#gaT').textContent=g.title;$('#gaD').textContent=g.desc;$('#gaI').innerHTML=g.img?`<img src='${g.img}' alt='${esc(g.title)}'>`:'<span>🎁<br>Ảnh GA<br>(tải lên trong Quản trị)</span>'}
+function pic(f,max,sq){return new Promise((ok,no)=>{if(!/^image[/](jpeg|png|webp)$/.test(f.type))return no('Chỉ nhận ảnh JPG, PNG hoặc WebP.');if(f.size>8*1024*1024)return no('Ảnh quá lớn (tối đa 8MB).');const im=new Image(),u=URL.createObjectURL(f);im.onload=()=>{let w=im.width,h=im.height,sx=0,sy=0,sw=w,sh=h;if(sq){const m=Math.min(w,h);sx=(w-m)/2;sy=(h-m)/2;sw=m;sh=m;w=Math.min(m,max);h=w}else{const k=Math.min(1,max/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k)}const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,sx,sy,sw,sh,0,0,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',.82))};im.onerror=()=>no('Không đọc được ảnh này.');im.src=u})}
+function pv(){if($('#kP'))$('#kP').innerHTML=D.gift.imgs.map((s,i)=>`<span style='position:relative'><img src='${s}' style='width:72px;height:72px;object-fit:cover;border-radius:8px' alt=''><button data-a='kRm' data-i='${i}' aria-label='Xóa ảnh' style='position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:#2a1d15;color:#fff8ec'>✕</button></span>`).join('')||`<span class='note'>Chưa có ảnh quà tặng</span>`;$('#aP').innerHTML=D.avatar?`<img src='${D.avatar}' alt=''>`:ini(D.name);$('#gP').innerHTML=D.ga.img?`<img src='${D.ga.img}' alt=''>`:'<span>Chưa có ảnh GA</span>'}
+function adm(){D=JSON.parse(JSON.stringify(S));$('#ad').innerHTML=`<div class='hd'><h2 style='margin:0'>Quản trị (xem trước)</h2><button class='ib' data-a='close' aria-label='Đóng'>✕</button></div><div class='note' style='background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px'><b>Bản xem trước:</b> chưa có đăng nhập, dữ liệu chỉ lưu trong trình duyệt này. Bản thật sẽ có đăng nhập admin và lưu trên Supabase để hiện trên mọi thiết bị.</div><h3>Avatar / Logo</h3><span id='aP' class='av big'></span><label>Tên shop</label><input id='aN' value='${esc(D.name)}'><label>Ảnh đại diện (tự cắt vuông ở giữa)</label><input type='file' id='aF' accept='image/jpeg,image/png,image/webp'><button class='btn o' data-a='aRm' style='margin-top:8px;padding:6px 12px'>Xóa avatar</button><h3>Giveaway (GA)</h3><label style='display:flex;gap:8px;align-items:center'><input type='checkbox' id='gOn' style='width:auto' ${D.ga.on?'checked':''}> Hiển thị mục GA</label><label>Tiêu đề GA</label><input id='gT' value='${esc(D.ga.title)}'><label>Mô tả</label><textarea id='gD' rows='3'>${esc(D.ga.desc)}</textarea><label>Link Facebook Group hoặc bài GA</label><input id='gU' inputmode='url' placeholder='https://facebook.com/...' value='${esc(D.ga.url)}'><label>Ảnh GA</label><div class='gai' id='gP' style='transform:none;margin-bottom:8px'></div><input type='file' id='gF' accept='image/jpeg,image/png,image/webp'><button class='btn o' data-a='gRm' style='margin-top:8px;padding:6px 12px'>Xóa ảnh GA</button><h3>Quà tặng theo quý</h3><label>Điều kiện tham gia</label><textarea id='kC' rows='4'>${esc(D.gift.cond)}</textarea><label>Hình ảnh quà tặng (tối đa 4 ảnh)</label><div id='kP' style='display:flex;gap:8px;flex-wrap:wrap'></div><input type='file' id='kF' accept='image/jpeg,image/png,image/webp' multiple style='margin-top:8px'><button class='btn' data-a='adSave' style='width:100%;margin-top:18px'>Lưu thay đổi</button>`;pv();ov('ad',true)}
+$('#ad').addEventListener('change',async e=>{const t=e.target;if(t.id!=='aF'&&t.id!=='gF')return;const f=t.files[0];if(!f)return;try{const d=await pic(f,t.id==='aF'?320:900,t.id==='aF');if(t.id==='aF')D.avatar=d;else D.ga.img=d;pv()}catch(m){toast(m)}t.value=''});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a;
+if(a==='ga'){e.preventDefault();$('#mnav').classList.remove('on');if(S.ga.url&&okUrl(S.ga.url))window.open(S.ga.url,'_blank','noopener');else toast('Admin chưa cài link GA. Vào Quản trị › Giveaway để thêm.')}
+else if(a==='admin'){e.preventDefault();adm()}
+else if(a==='aRm'){D.avatar='';pv()}else if(a==='gRm'){D.ga.img='';pv()}
+else if(a==='adSave'){const n=$('#aN').value.trim(),u=$('#gU').value.trim(),t=$('#gT').value.trim(),on=$('#gOn').checked;if(!n)return toast('Tên shop không được để trống');if(u&&!okUrl(u))return toast('Link GA phải bắt đầu bằng http:// hoặc https://');if(on&&!t)return toast('Nhập tiêu đề GA hoặc tắt hiển thị GA');D.name=n;D.gift.cond=$('#kC').value.trim();D.ga.on=on;D.ga.title=t;D.ga.desc=$('#gD').value.trim();D.ga.url=u;try{localStorage.setItem('ats_set',JSON.stringify(D))}catch(x){return toast('Không lưu được: ảnh quá nặng hoặc trình duyệt chặn lưu trữ')}S=D;apply();ov('ad',false);toast('Đã lưu thay đổi')}});
+Object.keys(cart).forEach(i=>{if(!by(i)||cart[i]<=0)delete cart[i]});function gift(){const g=S.gift,ps=P.filter(x=>x.cp);$('#gf').innerHTML=`<div class='hd'><h2 style='margin:0;font-size:24px'>Quà tặng theo quý</h2><button class='ib' data-a='close' aria-label='Đóng'>✕</button></div><span class='st ex'>ĐỘC QUYỀN CHỈ CÓ TRONG GROUP</span><h3 style='margin:12px 0 4px'>Season 01 · Winter Collection</h3><h3 style='font-size:18px;margin-top:16px'>Điều kiện tham gia</h3><p style='white-space:pre-line'>${esc(g.cond)}</p><h3 style='font-size:18px'>Hình ảnh quà tặng</h3>${g.imgs.length?`<div class='gfg'>${g.imgs.map(s=>`<img src='${s}' alt='Quà tặng'>`).join('')}</div>`:`<div class='gai' style='transform:none'><span>🎁<br>Ảnh quà tặng<br>(admin tải lên)</span></div>`}<h3 style='font-size:18px;margin-top:18px'>Sản phẩm của đợt này</h3><div class='grid' style='grid-template-columns:1fr 1fr'>${ps.map(card).join('')}</div><div class='row'><button class='btn' data-a='cart'>Xem giỏ hàng</button><button class='btn o' data-a='close'>Đóng</button></div>`;ov('gift',true)}
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a;if(a==='gift')gift();else if(a==='kRm'){D.gift.imgs.splice(+el.dataset.i,1);pv()}});
+$('#ad').addEventListener('change',async e=>{const t=e.target;if(t.id!=='kF')return;const room=4-D.gift.imgs.length;if(room<=0){toast('Tối đa 4 ảnh. Xóa bớt trước khi thêm.');t.value='';return}for(const f of [...t.files].slice(0,room)){try{D.gift.imgs.push(await pic(f,700,false))}catch(m){toast(m)}}pv();t.value=''});
+save();cartUI();render();apply();if(location.hash==='#admin')adm();
+</script></body></html>
