@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Am Tu Sĩ – Merch LingOrm (bản xem trước)</title>
+<title>Am Tu Sĩ – Only LingOrm (bản xem trước)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f0e6;--card:#fffaf2;--ink:#2a1d15;--brown:#6b4a36;--line:#e3d6c4;--acc:#8fa07e;--accink:#fff;--warn:#b4533a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -196,7 +196,7 @@ else if(a==='img'){$('#lb').innerHTML=`<div class="hd"><b>Ảnh ${+el.dataset.i+
 else if(a==='ph'||a==='pol'){e.preventDefault();toast(el.dataset.m)}
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.ov').forEach(o=>o.classList.remove('on'))});
-const DEF={name:'Am Tu Sĩ',avatar:'',ga:{on:true,title:'GA Winter Season 01',desc:'Bình luận và tham gia để có cơ hội nhận quà fanmade từ shop.',url:'',img:''},gift:{cond:'Là member đã gia nhập group “Fans Cuồng CH3”.\n(Nội dung mẫu: admin cập nhật điều kiện cụ thể của đợt này trong Quản trị.)',imgs:[]}};let S=JSON.parse(JSON.stringify(DEF));try{const r=JSON.parse(localStorage.getItem('ats_set')||'null');if(r)S={...DEF,...r,ga:{...DEF.ga,...(r.ga||{})},gift:{...DEF.gift,...(r.gift||{})}}}catch(e){}let D=null;
+const DEF={name:'Am Tu Sĩ',avatar:'',ga:{on:true,title:'GA Winter Season 01',desc:'Bình luận và tham gia để có cơ hội nhận quà fanmade từ các nhà tài trợ.',url:'',img:''},gift:{cond:'Là member đã gia nhập group “Fans Cuồng CH3”.\n(Nội dung mẫu: admin cập nhật điều kiện cụ thể của đợt này trong Quản trị.)',imgs:[]}};let S=JSON.parse(JSON.stringify(DEF));try{const r=JSON.parse(localStorage.getItem('ats_set')||'null');if(r)S={...DEF,...r,ga:{...DEF.ga,...(r.ga||{})},gift:{...DEF.gift,...(r.gift||{})}}}catch(e){}let D=null;
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/'/g,'&#39;');const okUrl=u=>/^https?:[/][/][^ ]+$/i.test(u);
 const ini=n=>esc((n||'A').trim().charAt(0).toUpperCase());
 function apply(){const av=S.avatar?`<img src='${S.avatar}' alt='${esc(S.name)}'>`:ini(S.name);['avH','avB','avF'].forEach(i=>$('#'+i).innerHTML=av);['shopN','shopN2','shopN3'].forEach(i=>$('#'+i).textContent=S.name);document.title=S.name+' – Merch LingOrm (bản xem trước)';const g=S.ga;$('#ga').style.display=g.on?'':'none';['navGa','mGa'].forEach(i=>$('#'+i).style.display=g.on?'':'none');$('#gaT').textContent=g.title;$('#gaD').textContent=g.desc;$('#gaI').innerHTML=g.img?`<img src='${g.img}' alt='${esc(g.title)}'>`:'<span>🎁<br>Ảnh GA<br>(tải lên trong Quản trị)</span>'}
